@@ -34,10 +34,9 @@ const ops = async (req,res,next)=>{
                 const result = await addAcc({name,email,password,role})
                 res.json({ result })
             }
-            else{
-                res.send("Give a valid operation")
+            else if (req.params.operation === "delete"){
+                res.send("Got request")
             }
-
         }
         else {
             res.send("Acess not granted")

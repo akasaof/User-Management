@@ -21,12 +21,6 @@ const server = express()
 server.use(cors())
 server.use(express.json())
 
-
-
-
-
-
-
 // server.get("/getUser", (req, res) => {
 //     userModel.find()
 //         .then((result) => {
@@ -44,9 +38,9 @@ server.post("/login", authentication, (req, res) => {
 })
 
 
-
 server.post("/crud/:operation", auth,ops, async (req, res) => {
 })
+
 
 
 

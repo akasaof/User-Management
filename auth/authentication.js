@@ -10,7 +10,6 @@ const authentication = async (req,res,next)=>{
             console.log(account)
             const {password} = account
             const verified = await bcrypt.compare(credentials.password,password)
-            
             if(!verified){
                 req.message = "Incorrect Password"
             }
